@@ -1,4 +1,4 @@
-// my first program in C++
+// Our first program in C++
 #include <iostream>
 
 using namespace std;
