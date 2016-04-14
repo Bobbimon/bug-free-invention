@@ -14,6 +14,7 @@ public:
 	int getHit();
 	void setBlock(int);
 	int getBlock();
+private:
 	int hit;
 	int block;
 };

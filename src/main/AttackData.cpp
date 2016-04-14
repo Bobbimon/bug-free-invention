@@ -10,8 +10,6 @@
 using namespace std;
 
 
-
-
 	void AttackData::setHit(int x){
 		hit = x;
 	}
