@@ -13,22 +13,22 @@ int main ()
 	character();
     return 0;
 }
-void attack(int x){
+void display(string x){
 
-	AttackData attack;
-
+	Characters ch;
 
 	AttackData oh;
 	oh.setHit(20);
 
 
 	cout << "Character " << "      " << " attack "<<"      "<<" on hit  "<<"on block"<< endl;
-	cout << "Sabrewulf " << "------" <<""<<"------"<<"   "<<oh.getHit()<<" "<<"     -2"<< endl;
+	cout << "" << "------" <<""<<"------"<<"   "<<oh.getHit()<<" "<<"     -2"<< endl;
 
 }
 
 int character(){
 
+	Characters choice;
 	int character;
 
 	cout <<"1. "<< "SabreWulf " << endl;
@@ -39,5 +39,6 @@ int character(){
 	cout <<"6. "<< "Tobiey " << endl;
 	cin >> character;
 
+	choice.characters(character);
 
 }

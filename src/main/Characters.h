@@ -12,8 +12,8 @@
 class Characters {
 public:
 	std::string characters(int);
-private:
-	std::string character;
+	std::string name;
+	int choice;
 };
 
 #endif /* CHARACTERS_H_ */

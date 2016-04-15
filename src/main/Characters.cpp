@@ -12,10 +12,14 @@
 
 using namespace std;
 
-string characters(int x){
-ofstream characters;
-characters.open("characters.txt");
+string Characters::characters(int x){
 
+choice = x;
+ifstream characters;
+characters.open("characters.txt");
+while (characters >> name){
+	cout<< name << endl;
+}
 //buckyFile<<"I love tuna and tuna loves me!\n";
 //buckyFile.close();
 }
