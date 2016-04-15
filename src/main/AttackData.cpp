@@ -6,14 +6,13 @@
  */
 #include "AttackData.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
-
 
 	void AttackData::setHit(int x){
 		hit = x;
 	}
-
 	int AttackData::getHit(){
 		return hit;
 	}
@@ -22,7 +21,6 @@ using namespace std;
 	}
 	int AttackData::getBlock(){
 		return block;
-
 	}
 
 

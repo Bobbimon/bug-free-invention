@@ -7,6 +7,8 @@
 
 #ifndef SRC_MAIN_ATTACKDATA_H_
 #define SRC_MAIN_ATTACKDATA_H_
+#include <string>
+
 
 class AttackData {
 public:
