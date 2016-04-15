@@ -11,13 +11,7 @@ int character();
 
 int main ()
 {
-	string name;
-	ifstream characters;
-	characters.open("characters.txt");
-	characters >> name;
-	cout<<name<<endl;
-
-cout<< "hej"<<endl;
+character();
 
 }
 void display(string x){

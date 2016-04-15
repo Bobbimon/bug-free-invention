@@ -15,11 +15,17 @@ using namespace std;
 string Characters::characters(int x){
 
 choice = x;
+
+if(choice!=1){
 ifstream characters;
 characters.open("characters.txt");
 while (characters >> name){
-	return name;
+	cout<<name<<endl;
+
 }
+}
+
 //buckyFile<<"I love tuna and tuna loves me!\n";
 //buckyFile.close();
 }
+
