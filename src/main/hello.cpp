@@ -38,6 +38,7 @@ int character(){
 	cout <<"4. "<< "Glacius " << endl;
 	cout <<"5. "<< "Jago " << endl;
 	cout <<"6. "<< "Tobiey " << endl;
+
 	cin >> character;
 
 	choice.characters(character);

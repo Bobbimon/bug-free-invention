@@ -16,14 +16,13 @@ string Characters::characters(int x){
 
 choice = x;
 
-if(choice!=1){
-ifstream characters;
-characters.open("characters.txt");
+ifstream characters("characters.txt");
 while (characters >> name){
-	cout<<name<<endl;
+	//getline(choice,name);
+	cout<<name<< choice<<endl;
 
 }
-}
+
 
 //buckyFile<<"I love tuna and tuna loves me!\n";
 //buckyFile.close();
