@@ -14,11 +14,11 @@ int main ()
 	string name;
 	ifstream characters;
 	characters.open("characters.txt");
-	while (characters >> name){
-		cout<<name<<endl;
-	}
+	characters >> name;
+	cout<<name<<endl;
 
-    return 0;
+cout<< "hej"<<endl;
+
 }
 void display(string x){
 
