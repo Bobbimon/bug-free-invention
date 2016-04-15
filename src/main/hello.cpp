@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "Characters.h"
+#include <fstream>
 using namespace std;
 
 void attack();
@@ -10,7 +11,13 @@ int character();
 
 int main ()
 {
-	character();
+	string name;
+	ifstream characters;
+	characters.open("characters.txt");
+	while (characters >> name){
+		cout<<name<<endl;
+	}
+
     return 0;
 }
 void display(string x){

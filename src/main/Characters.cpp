@@ -18,7 +18,7 @@ choice = x;
 ifstream characters;
 characters.open("characters.txt");
 while (characters >> name){
-	cout<< name << endl;
+	return name;
 }
 //buckyFile<<"I love tuna and tuna loves me!\n";
 //buckyFile.close();
