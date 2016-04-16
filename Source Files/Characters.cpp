@@ -23,7 +23,7 @@ void Characters::characters(int x) {
 	choice = ostr.str() + ".";
 
 	ifstream myfile;
-	myfile.open("characters.txt");
+	myfile.open("Resource Files/characters.txt");
 
 	while (myfile >> nr >> name) {
 		if (choice.compare(nr) == 0) {

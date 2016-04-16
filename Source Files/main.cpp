@@ -36,7 +36,7 @@ void character() {
 	string nr;
 
 	ifstream myfile;
-	myfile.open("characters.txt");
+	myfile.open("Resource Files/characters.txt");
 
 	while (myfile >> nr >> name) {
 		cout << nr << " " << name << endl;
