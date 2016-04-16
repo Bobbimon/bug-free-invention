@@ -7,7 +7,8 @@
 
 #ifndef CHARACTERS_H_
 #define CHARACTERS_H_
-#include<string>
+#include <string>
+#include <sstream>
 
 class Characters {
 public:
