@@ -1,8 +1,7 @@
-# https://www.primagames.com/games/killer-instinct/feature/killer-instinct-frame-data-analysis-jago
 Attack Startup Active Advantage_on_hit Advantage_on_block
 Double_Roundhouse 7 4 5 3
 Neck_Cutter 18 2 -2 -6
-LP 4 2 4 0
+Close_LP 4 2 4 0
 Close_MP 4 2 4 0
 Far_MP 5 3 1 -2
 Close_MP 4 3 2 -1
@@ -41,3 +40,5 @@ Shadow_Tiger_Fury 3/0 4 N/A -42
 Shadow_Endokuken 5/1 0 N/A -4
 Shadow_Laser_Sword 3/2 4 6 2
 Shadow_Wind_Kick 3/3 20 5 1
+
+# https://www.primagames.com/games/killer-instinct/feature/killer-instinct-frame-data-analysis-jago

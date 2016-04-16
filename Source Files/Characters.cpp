@@ -28,9 +28,24 @@ void Characters::characters(int x) {
 	while (myfile >> nr >> name) {
 		if (choice.compare(nr) == 0) {
 			cout << nr << " " << name << endl;
+			break;
 		}
 	}
 
 	myfile.close();
 
+	if (name.compare("Jago") == 0) {
+		myfile.open("Resource Files/jago.txt");
+
+		std::string attack;
+		std::string startup;
+		std::string active;
+		std::string advantage_on_hit;
+		std::string advantage_on_block;
+
+		while (myfile >> attack >> startup >> active >> advantage_on_hit >> advantage_on_block) {
+			cout << attack << "\t" << startup << "\t" << active << "\t" << advantage_on_hit << "\t" << advantage_on_block << endl;
+		}
+		myfile.close();
+	}
 }
