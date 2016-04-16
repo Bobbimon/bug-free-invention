@@ -32,16 +32,14 @@ void display(string x){
 void character(){
 
 	Characters choice;
-	string character;
+	int character;
 	string name;
 	string nr;
-	//ifstream characters("characters.txt");
 
 	ifstream myfile;
 	myfile.open ("characters.txt");
 
 	while (myfile >>nr>> name){
-		//getline(choice,name);
 		cout<<nr<<" "<<name<<endl;
 	}
 

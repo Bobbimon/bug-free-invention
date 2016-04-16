@@ -7,29 +7,28 @@
 #include "AttackData.h"
 #include <iostream>
 #include <string>
+#include<sstream>
 #include "Characters.h"
 #include <fstream>
 
 using namespace std;
 
-void Characters::characters(string x){
+void Characters::characters(int x){
 
-choice = x;
-
-//ifstream characters("characters.txt");
+ostringstream ostr;
+ostr << x;
+choice = ostr.str() + ".";
 
 ifstream myfile;
 myfile.open ("characters.txt");
 
-while (myfile >>nr>> name){
+while (myfile >> nr >> name){
 	if (choice.compare(nr)==0){
-		cout<<nr<<name<< choice<<endl;
+		cout << nr << " " << name << endl;
 	}
-	//getline(choice,name);
 }
 
 myfile.close();
 //buckyFile<<"I love tuna and tuna loves me!\n";
 //buckyFile.close();
 }
-
