@@ -1,9 +1,9 @@
 // Our first program in C++
-#include "AttackData.h"
 #include <iostream>
 #include <string>
-#include "Characters.h"
 #include <fstream>
+#include "../Header Files/AttackData.h"
+#include "../Header Files/Characters.h"
 
 using namespace std;
 

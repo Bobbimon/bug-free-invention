@@ -4,11 +4,13 @@
  *  Created on: 15 apr. 2016
  *      Author: jogr
  */
-#include "AttackData.h"
+
+#include "../Header Files/AttackData.h"
+#include "../Header Files/Characters.h"
+
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "Characters.h"
 #include <sstream>
 #include <fstream>
 
