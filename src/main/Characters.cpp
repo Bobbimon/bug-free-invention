@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void Characters::characters(int x){
+void Characters::characters(string x){
 
 choice = x;
 
@@ -21,9 +21,11 @@ choice = x;
 ifstream myfile;
 myfile.open ("characters.txt");
 
-while (myfile >> name){
+while (myfile >>nr>> name){
+	if (choice.compare(nr)==0){
+		cout<<nr<<name<< choice<<endl;
+	}
 	//getline(choice,name);
-	cout<<name<< choice<<endl;
 }
 
 myfile.close();

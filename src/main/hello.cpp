@@ -32,14 +32,18 @@ void display(string x){
 void character(){
 
 	Characters choice;
-	int character;
+	string character;
+	string name;
+	string nr;
+	//ifstream characters("characters.txt");
 
-	cout <<"1. "<< "SabreWulf " << endl;
-	cout <<"2. "<< "Fulgore " << endl;
-	cout <<"3. "<< "Orchid " << endl;
-	cout <<"4. "<< "Glacius " << endl;
-	cout <<"5. "<< "Jago " << endl;
-	cout <<"6. "<< "Tobiey " << endl;
+	ifstream myfile;
+	myfile.open ("characters.txt");
+
+	while (myfile >>nr>> name){
+		//getline(choice,name);
+		cout<<nr<<" "<<name<<endl;
+	}
 
 	cin >> character;
 
