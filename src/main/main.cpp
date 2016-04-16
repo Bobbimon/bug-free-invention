@@ -42,6 +42,6 @@ void character(){
 	while (myfile >>nr>> name){
 		cout<<nr<<" "<<name<<endl;
 	}
-
+	cin>>character;
 	choice.characters(character);
 }
