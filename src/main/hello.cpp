@@ -32,7 +32,7 @@ void display(string x){
 void character(){
 
 	Characters choice;
-	string character;
+	int character;
 	string name;
 	string nr;
 	//ifstream characters("characters.txt");
@@ -44,8 +44,6 @@ void character(){
 		//getline(choice,name);
 		cout<<nr<<" "<<name<<endl;
 	}
-
-	cin >> character;
 
 	choice.characters(character);
 }
