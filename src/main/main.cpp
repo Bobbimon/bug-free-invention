@@ -7,41 +7,42 @@
 
 using namespace std;
 
-//void attack();
 void character();
 
-int main ()
-{
+int main() {
 	character();
 
 	return 0;
 }
 
-void display(string x){
+void display(string x) {
 
 	Characters ch;
 
 	AttackData oh;
 	oh.setHit(20);
 
-
-	cout << "Character " << "      " << " attack "<<"      "<<" on hit  "<<"on block"<< endl;
-	cout << "" << "------" <<""<<"------"<<"   "<<oh.getHit()<<" "<<"     -2"<< endl;
+	cout << "Character " << "      " << " attack " << "      " << " on hit  "
+			<< "on block" << endl;
+	cout << "" << "------" << "" << "------" << "   " << oh.getHit() << " "
+			<< "     -2" << endl;
 }
 
-void character(){
+void character() {
 
-	Characters choice;
 	int character;
+	Characters choice;
 	string name;
 	string nr;
 
 	ifstream myfile;
-	myfile.open ("characters.txt");
+	myfile.open("characters.txt");
 
-	while (myfile >>nr>> name){
-		cout<<nr<<" "<<name<<endl;
+	while (myfile >> nr >> name) {
+		cout << nr << " " << name << endl;
 	}
-	cin>>character;
+
+	cin >> character;
+
 	choice.characters(character);
 }

@@ -14,24 +14,21 @@
 
 using namespace std;
 
-void Characters::characters(int x){
+void Characters::characters(int x) {
 
+	ostringstream ostr;
+	ostr << x;
+	choice = ostr.str() + ".";
 
-ostringstream ostr;
-ostr << x;
-choice = ostr.str() + ".";
+	ifstream myfile;
+	myfile.open("characters.txt");
 
-ifstream myfile;
-myfile.open ("characters.txt");
-
-while (myfile >> nr >> name){
-	if (choice.compare(nr)==0){
-		cout << nr << " " << name << endl;
-
+	while (myfile >> nr >> name) {
+		if (choice.compare(nr) == 0) {
+			cout << nr << " " << name << endl;
+		}
 	}
-}
 
-myfile.close();
-//buckyFile<<"I love tuna and tuna loves me!\n";
-//buckyFile.close();
+	myfile.close();
+
 }
