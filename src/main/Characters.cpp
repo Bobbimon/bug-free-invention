@@ -7,7 +7,7 @@
 #include "AttackData.h"
 #include <iostream>
 #include <string>
-#include<sstream>
+#include <sstream>
 #include "Characters.h"
 #include <fstream>
 
