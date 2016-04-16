@@ -4,16 +4,19 @@
 #include <string>
 #include "Characters.h"
 #include <fstream>
+
 using namespace std;
 
-void attack();
-int character();
+//void attack();
+void character();
 
 int main ()
 {
-character();
+	character();
 
+	return 0;
 }
+
 void display(string x){
 
 	Characters ch;
@@ -24,10 +27,9 @@ void display(string x){
 
 	cout << "Character " << "      " << " attack "<<"      "<<" on hit  "<<"on block"<< endl;
 	cout << "" << "------" <<""<<"------"<<"   "<<oh.getHit()<<" "<<"     -2"<< endl;
-
 }
 
-int character(){
+void character(){
 
 	Characters choice;
 	int character;
@@ -42,5 +44,4 @@ int character(){
 	cin >> character;
 
 	choice.characters(character);
-
 }

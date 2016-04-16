@@ -12,18 +12,21 @@
 
 using namespace std;
 
-string Characters::characters(int x){
+void Characters::characters(int x){
 
 choice = x;
 
-ifstream characters("characters.txt");
-while (characters >> name){
+//ifstream characters("characters.txt");
+
+ifstream myfile;
+myfile.open ("characters.txt");
+
+while (myfile >> name){
 	//getline(choice,name);
 	cout<<name<< choice<<endl;
-
 }
 
-
+myfile.close();
 //buckyFile<<"I love tuna and tuna loves me!\n";
 //buckyFile.close();
 }

@@ -11,7 +11,7 @@
 
 class Characters {
 public:
-	std::string characters(int);
+	void characters(int);
 	std::string name;
 	int choice;
 };
