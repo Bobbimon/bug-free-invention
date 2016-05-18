@@ -48,4 +48,35 @@ void Characters::characters(int x) {
 		}
 		myfile.close();
 	}
+	cout << "\ndo you whant to sort? y/n" <<endl;
+	cin >> answer;
+	switch(answer)
+	{
+	case 'y':
+		cout << "\nHow do you want to sort? 1. Safe on block 2. Unsafe on block 3. Low startup." <<endl;
+		cin >> sortby;
+		switch(sortby){
+		case 1:
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		}
+	break;
+	case 'n':
+		cout << "\nSelect new character? y/n" <<endl;
+		cin >> answer;
+		switch(answer)
+		{
+		case 'y':
+			break;
+		case 'n':
+			break;
+		}
+	break;
+
+	default: cout<<"invalid choice";
+	}
+
 }

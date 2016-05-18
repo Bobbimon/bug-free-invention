@@ -13,6 +13,8 @@
 class Characters {
 public:
 	void characters(int);
+	char answer;
+	int sortby;
 	std::string name;
 	std::string choice;
 	std::string nr;
