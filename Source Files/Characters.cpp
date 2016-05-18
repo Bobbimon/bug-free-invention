@@ -75,7 +75,7 @@ void Characters::characters(int x) {
 			break;
 		}
 	break;
-
+kuk
 	default: cout<<"invalid choice";
 	}
 
