@@ -72,6 +72,7 @@ void Characters::characters(int x) {
 		case 'y':
 			break;
 		case 'n':
+			cout << "Jon!!!" << endl;
 			break;
 		}
 	break;
