@@ -1,0 +1,31 @@
+CC = gcc
+CFLAGS = -Wall -g
+INCLUDES = -I/usr/include -I.
+LFLAGS = -L/usr/lib
+LIBS = -lstdc++
+SRCS = Main.cpp
+#OBJS = $(SRCS:.cpp=.o)
+OBJS = $(SRCS:.cpp)
+TARGET_DIR = ../../../target/bin
+#OBJ = $(TARGET_DIR)/Main.o
+MAIN = main
+
+.PHONY: depend clean
+
+all: $(MAIN)
+	@echo Sucessfully compiled Hello project.
+
+#$(MAIN): $(OBJS)
+#	$(CC) $(CFLAGS) $(INCLUDES) -o $(TARGET_DR)/$(MAIN) $(OBJ) $(LFLAGS) $(LIBS)
+
+$(MAIN): $(OBJS)
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(LFLAGS) $(LIBS)
+
+#.cpp.o:
+#	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $(TARGET_DIR)/$@
+
+clean:
+	$(RM) $(TARGET_DIR)/*.o $(TARGET_DIR)/$(MAIN)
+
+depend: $(SRCS)
+	makedepend $(INCLUDES) $^
