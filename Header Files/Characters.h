@@ -13,7 +13,7 @@
 class Characters {
 public:
 	void characters(int);
-
+	char answer2;
 	char answer;
 	int sortby;
 	std::string name;

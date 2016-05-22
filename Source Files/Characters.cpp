@@ -48,36 +48,51 @@ void Characters::characters(int x) {
 		}
 		myfile.close();
 	}
-	cout << "\ndo you whant to sort? y/n" <<endl;
-	cin >> answer;
-	switch(answer)
-	{
+
+	while (answer !='y' && answer !='n'){
+		cout << "\ndo you want to sort? y/n" <<endl;
+		cin >> answer;
+	switch(answer)	{
 	case 'y':
+		//förbannade skit funkar inte om jag råkar trycka på en bokstav istället för siffra!
+		while(sortby >3){
 		cout << "\nHow do you want to sort? 1. Safe on block 2. Unsafe on block 3. Low startup." <<endl;
 		cin >> sortby;
 		switch(sortby){
 		case 1:
+			cout<<"du kan va safe on block!";
 			break;
 		case 2:
+			cout<<"nope, not doing it";
 			break;
 		case 3:
+			cout<<"..still not doing it";
 			break;
+		default: cout<<"invalid choice, try a smaller number idiot";
+
+		}
 		}
 	break;
+
 	case 'n':
+		while(answer2 != 'y' && answer2 != 'n'){
 		cout << "\nSelect new character? y/n" <<endl;
-		cin >> answer;
-		switch(answer)
-		{
+		cin >> answer2;
+		switch(answer2){
 		case 'y':
+			cout << "yeeeeeesss!!!" << endl;
 			break;
 		case 'n':
-			cout << "Jon!!!" << endl;
+			cout << "noooooooooooo!!!" << endl;
 			break;
+		default: cout<<"invalid choice";
 		}
-	break;
+		}
+		break;
 
-	default: cout<<"invalid choice";
+		default: cout<<"invalid choice";
+
+
 	}
-
+	}
 }
