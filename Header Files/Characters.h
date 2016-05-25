@@ -7,6 +7,7 @@
 
 #ifndef CHARACTERS_H_
 #define CHARACTERS_H_
+#include <limits>
 #include <string>
 #include <sstream>
 

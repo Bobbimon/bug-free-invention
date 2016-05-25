@@ -9,6 +9,7 @@
 #include "../Header Files/Characters.h"
 
 #include <iostream>
+#include <limits>
 #include <string>
 #include <sstream>
 #include <sstream>
@@ -43,56 +44,72 @@ void Characters::characters(int x) {
 		std::string advantage_on_hit;
 		std::string advantage_on_block;
 
-		while (myfile >> attack >> startup >> active >> advantage_on_hit >> advantage_on_block) {
-			cout << attack << "\t" << startup << "\t" << active << "\t" << advantage_on_hit << "\t" << advantage_on_block << endl;
+		while (myfile >> attack >> startup >> active >> advantage_on_hit
+				>> advantage_on_block) {
+			cout << attack << "\t" << startup << "\t" << active << "\t"
+					<< advantage_on_hit << "\t" << advantage_on_block << endl;
 		}
 		myfile.close();
 	}
 
-	while (answer !='y' && answer !='n'){
-		cout << "\ndo you want to sort? y/n" <<endl;
+	while (answer != 'y' || answer != 'n') {
+		cout << "\nDo you want to sort? y/n" << endl;
 		cin >> answer;
-	switch(answer)	{
-	case 'y':
-		//fÃ¶rbannade skit funkar inte om jag rÃ¥kar trycka pÃ¥ en bokstav istÃ¤llet fÃ¶r siffra!
-		while(sortby >3){
-		cout << "\nHow do you want to sort? 1. Safe on block 2. Unsafe on block 3. Low startup." <<endl;
-		cin >> sortby;
-		switch(sortby){
-		case 1:
-			cout<<"du kan va safe on block!";
-			break;
-		case 2:
-			cout<<"nope, not doing it";
-			break;
-		case 3:
-			cout<<"..still not doing it";
-			break;
-		default: cout<<"invalid choice, try a smaller number idiot";
-
-		}
-		}
-	break;
-
-	case 'n':
-		while(answer2 != 'y' && answer2 != 'n'){
-		cout << "\nSelect new character? y/n" <<endl;
-		cin >> answer2;
-		switch(answer2){
+		switch (answer) {
 		case 'y':
-			cout << "yeeeeeesss!!!" << endl;
+			while (sortby != 1 || sortby != 2 || sortby != 3) {
+				cout << "How do you want to sort? 1. Safe on block 2. Unsafe on block 3. Low startup." << endl;
+				/*Nar en char inte gar att parsa till en int sa blir det problem
+				 * Sa nu kollar vi om det ar en int som vi skickar in annars sa ignorerar vi den.
+				 *
+				 * Jag tror att det kanske gar efter https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
+				 *
+				 * nar cin laser in det tecken far tecken.. MEN jag ar inte saker vilket begransar oss till 0-9.
+				 *
+				 * Men jag bara flummar.. :P å ä och ö blev skumma symboler
+				 */
+				while (!(cin >> sortby)) {
+					cin.clear();
+					cin.ignore(numeric_limits<streamsize>::max(), '\n');
+					cout << "Invalid input.  Try again: ";
+				}
+				cout << "You entered: " << sortby << endl;
+
+				switch (sortby) {
+				case 1:
+					cout << "Du kan va safe on block!" << endl << endl;
+					break;
+				case 2:
+					cout << "Nope, not doing it" << endl << endl;
+					break;
+				case 3:
+					cout << "..still not doing it" << endl << endl;
+					break;
+				default:
+					cout << "invalid choice, try a smaller number idiot" << endl << endl;
+				}
+			}
 			break;
+
 		case 'n':
-			cout << "noooooooooooo!!!" << endl;
+			while (answer2 != 'y' || answer2 != 'n') {
+				cout << "\nSelect new character? y/n" << endl;
+				cin >> answer2;
+				switch (answer2) {
+				case 'y':
+					cout << "yeeeeeesss!!!" << endl;
+					break;
+				case 'n':
+					cout << "noooooooooooo!!!" << endl;
+					break;
+				default:
+					cout << "invalid choice" << endl;
+				}
+			}
 			break;
-		default: cout<<"invalid choice";
+
+		default:
+			cout << "invalid choice";
 		}
-		}
-		break;
-
-		default: cout<<"invalid choice";
-
-
-	}
 	}
 }
