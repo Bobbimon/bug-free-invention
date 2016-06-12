@@ -12,11 +12,14 @@
 
 class AttackData {
 public:
+	void setCharacter(int);
+	int getCharacter();
 	void setHit(int);
 	int getHit();
 	void setBlock(int);
 	int getBlock();
 private:
+	int character;
 	int hit;
 	int block;
 };

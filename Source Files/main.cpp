@@ -6,7 +6,6 @@
 #include "../Header Files/Characters.h"
 
 using namespace std;
-
 void character();
 
 int main() {
@@ -43,6 +42,5 @@ void character() {
 	}
 
 	cin >> character;
-
 	choice.characters(character);
 }

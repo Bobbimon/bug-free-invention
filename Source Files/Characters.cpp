@@ -16,6 +16,7 @@
 #include <fstream>
 
 using namespace std;
+void character();
 
 void Characters::characters(int x) {
 
@@ -58,7 +59,7 @@ void Characters::characters(int x) {
 		switch (answer) {
 		case 'y':
 			while (sortby != 1 || sortby != 2 || sortby != 3) {
-				cout << "How do you want to sort? 1. Safe on block 2. Unsafe on block 3. Low startup." << endl;
+				cout << "How do you want to sort? 1. Safe on block 2. Unsafe on block 3. Low startup 4. Back" << endl;
 				/*Nar en char inte gar att parsa till en int sa blir det problem
 				 * Sa nu kollar vi om det ar en int som vi skickar in annars sa ignorerar vi den.
 				 *
@@ -66,7 +67,7 @@ void Characters::characters(int x) {
 				 *
 				 * nar cin laser in det tecken far tecken.. MEN jag ar inte saker vilket begransar oss till 0-9.
 				 *
-				 * Men jag bara flummar.. :P å ä och ö blev skumma symboler
+				 * Men jag bara flummar.. :P ï¿½ ï¿½ och ï¿½ blev skumma symboler
 				 */
 				while (!(cin >> sortby)) {
 					cin.clear();
@@ -85,6 +86,10 @@ void Characters::characters(int x) {
 				case 3:
 					cout << "..still not doing it" << endl << endl;
 					break;
+				case 4:
+					cout << "printing stats.." << endl << endl;
+					characters(x);
+					break;
 				default:
 					cout << "invalid choice, try a smaller number idiot" << endl << endl;
 				}
@@ -98,6 +103,7 @@ void Characters::characters(int x) {
 				switch (answer2) {
 				case 'y':
 					cout << "yeeeeeesss!!!" << endl;
+					character();
 					break;
 				case 'n':
 					cout << "noooooooooooo!!!" << endl;

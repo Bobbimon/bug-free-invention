@@ -14,6 +14,12 @@ using namespace std;
 	void AttackData::setHit(int x){
 		hit = x;
 	}
+//	void AttackData::setCharacter(int x){
+//		character = x;
+//	}
+//	int AttackData::getCharacter(){
+//		return character;
+//	}
 	int AttackData::getHit(){
 		return hit;
 	}
